@@ -22,8 +22,6 @@ These match the constraints declared in `composer.json`.
 
 ### 1) Install the package
 
-If published to Packagist:
-
 ```bash
 composer require princeminky/promptable
 ```
