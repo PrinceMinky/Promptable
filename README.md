@@ -46,16 +46,22 @@ composer require princeminky/promptable:* --dev
 
 Auto-discovery will register the service provider and alias.
 
-### 2) Include the modal once in your app layout
+### 2) Include the modal in your Livewire view
 
-Add the Blade directive to your base layout so the modal HTML is present on every page. Put this near the end of the `<body>`:
+Use the Blade component inside a Livewire component view so `$this` refers to the Livewire instance:
 
 ```blade
-{{-- resources/views/components/layouts/app.blade.php --}}
-@promptable
+{{-- resources/views/livewire/delete-post.blade.php --}}
+<x-promptable />
 ```
 
-The directive renders the bundled Flux modal view `promptable::prompt`.
+Alternatively, you may include the view directly (Livewire views only):
+
+```blade
+@include('promptable::prompt')
+```
+
+Do not place this in a non-Livewire layout. It must be inside a Livewire component view.
 
 ### 3) (Optional) Publish the view for customization
 
