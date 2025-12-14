@@ -1,0 +1,38 @@
+{
+  "name": "princeminky/promptable",
+  "description": "Promptable. One line of code is all you need.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Prince Minky",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.3",
+    "illuminate/support": "^12.0",
+    "illuminate/routing": "^12.0",
+    "illuminate/view": "^12.0",
+    "livewire/livewire": "^3.5",
+    "livewire/flux": "^2.9.0",
+    "livewire/flux-pro": "^2.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "Princeminky\\Promptable\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Princeminky\\Promptable\\Providers\\PromptableServiceProvider"
+      ],
+      "aliases": {
+        "Promptable": "Princeminky\\Promptable\\Facades\\Promptable"
+      }
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
