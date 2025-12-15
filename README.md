@@ -52,13 +52,7 @@ Use the Blade component inside a Livewire component view so `$this` refers to th
 
 ```blade
 {{-- resources/views/livewire/delete-post.blade.php --}}
-<x-promptable />
-```
-
-Alternatively, you may include the view directly (Livewire views only):
-
-```blade
-@include('promptable::prompt')
+@promptable
 ```
 
 Do not place this in a non-Livewire layout. It must be inside a Livewire component view.
